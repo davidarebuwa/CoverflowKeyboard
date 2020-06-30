@@ -4,40 +4,23 @@
   <br>
   CoverflowKeyboard
 </h1>
+
 <p align="center">
   <img src="https://badgen.net/github/tag/micromatch/micromatch" />
   <img src="https://badgen.net/badge/icon/Cocoapods, SPM?label=Integration" />
   <img src="https://badgen.net/badge/icon/iOS, iPadOS?label=Platforms" />
   <img src="https://badgen.net/github/license/micromatch/micromatch" />
+  <br>
 </p>
 
 <p align="center">
-  This repository contains the <strong>ArrayMixer</strong> source code.
-  ArrayMixer is a tiny javascript lib with <strong>less than 1kb</strong> made to help ordering groups of arrays in a very personalized manner.
-Powerful and easy to use.
+  This repository contains the <strong>CoverflowKeyboard</strong> source code.
+  CoverflowKeyboard enables you to create creative and fancy Keyboard coverflows, with multiple styling and sizing options.
 </p>
 
 ## Table of contents
 
   * [Common usage](#common-usage)
-  * [Installation](#installation)
-     * [Node projects](#node-projects)
-     * [Web projects](#web-projects)
-  * [Parameters](#parameters)
-     * [Aliases](#aliases)
-     * [Sequence](#sequence)
-  * [Examples](#examples)
-     * [Example 1) For every 7 photos display an ad:](#example-1-for-every-7-photos-display-an-ad)
-     * [Example 2) For every 4 paragraphs of text include 2 images:](#example-2-for-every-4-paragraphs-of-text-include-2-images)
-     * [Example 3) In a group of 8 related links reserve positions 5 and 6 for sponsored links:](#example-3-in-a-group-of-8-related-links-reserve-positions-5-and-6-for-sponsored-links)
-     * [Example 4) Display a list of songs including the most successful songs for every 10 songs:](#example-4-display-a-list-of-songs-including-the-most-successful-songs-for-every-10-songs)
-     * [Example 5) You can also use larger aliases and the ES6 object shorthand:](#example-5-you-can-also-use-larger-aliases-and-the-es6-object-shorthand)
-     * [Example 6) View photos of puppies, kittens and penguins in sequence:](#example-6-view-photos-of-puppies-kittens-and-penguins-in-sequence)
-     * [Example 7) Include 1 large photo for every 2 medium size photos followed by 3 small photos:](#example-7-include-1-large-photo-for-every-2-medium-size-photos-followed-by-3-small-photos)
-     * [More examples](#more-examples)
-  * [Contributing](#contributing)
-  * [License](#license)
-  * [Special thanks](#special-thanks)
 
 ## Common usage
 
