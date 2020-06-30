@@ -20,6 +20,7 @@
 
 ## Table of contents
 
+  * [WIP ...](#wip)
   * [Contributing](#contributing)
   * [License](#license)
   * [Special thanks](#special-thanks)
@@ -27,11 +28,11 @@
 ## Contributing
 
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
-or translating any document here to your language. [Find more information in CONTRIBUTING.md](CONTRIBUTING.md).
+or translating any document here to your language. To find out more check out the [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-[MIT](LICENSE) - Jota Teles - 2020
+[MIT](LICENSE) - David Bosun-Arebuwa - 2020
 
 ## Special thanks
 
