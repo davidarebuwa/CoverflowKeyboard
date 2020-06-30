@@ -5,13 +5,10 @@
   CoverflowKeyboard
 </h1>
 <p align="center">
-  <a href="">
-    <img src="https://img.shields.io/badge?style=flat&label=License&message=MIT">
-  </a>
-  <a href="">
-    <img src="https://img.shields.io/badge?style=flat&label=Supports&message=iOS, iPadOS">
-  </a>
-  <img src="https://img.shields.io/badge?style=flat&label=Version&message=1.0.0">
+  <img src="https://badgen.net/github/tag/micromatch/micromatch" />
+  <img src="https://badgen.net/badge/icon/Cocoapods, SPM?label=Integration" />
+  <img src="https://badgen.net/badge/icon/iOS, iPadOS?label=Platforms" />
+  <img src="https://badgen.net/github/license/micromatch/micromatch" />
 </p>
 
 <p align="center">
