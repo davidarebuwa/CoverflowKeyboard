@@ -7,8 +7,8 @@
 
 <p align="center">
   <img src="https://badgen.net/github/tag/davidarebuwa/CoverflowKeyboard" />
-  <img src="https://badgen.net/badge/icon/Cocoapods, SPM?label=Integration" />
-  <img src="https://badgen.net/badge/icon/iOS, iPadOS?label=Platforms" />
+  <img src="https://badgen.net/badge/Integrations/Cocoapods,SPM?list=|" />
+  <img src="https://badgen.net/badge/Platforms/iOS,iPadOS?list=|" />
   <img src="https://badgen.net/github/license/davidarebuwa/CoverflowKeyboard" />
   <br>
 </p>
@@ -36,4 +36,4 @@ or translating any document here to your language. To find out more check out th
 
 ## Special thanks
 
-* [undeaD_D](https://github.com/undeaDD);
+* [undeaD_D](https://github.com/undeaDD)
