@@ -6,10 +6,10 @@
 </h1>
 
 <p align="center">
-  <img src="https://badgen.net/github/tag/micromatch/micromatch" />
+  <img src="https://badgen.net/github/tag/davidarebuwa/CoverflowKeyboard" />
   <img src="https://badgen.net/badge/icon/Cocoapods, SPM?label=Integration" />
   <img src="https://badgen.net/badge/icon/iOS, iPadOS?label=Platforms" />
-  <img src="https://badgen.net/github/license/micromatch/micromatch" />
+  <img src="https://badgen.net/github/license/davidarebuwa/CoverflowKeyboard" />
   <br>
 </p>
 
