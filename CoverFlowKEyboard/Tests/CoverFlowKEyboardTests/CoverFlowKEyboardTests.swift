@@ -1,12 +1,12 @@
 import XCTest
-@testable import CoverflowKeyboard
+@testable import CoverFlowKEyboard
 
-final class CoverflowKeyboardTests: XCTestCase {
+final class CoverFlowKEyboardTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(CoverflowKeyboard().text, "Hello, World!")
+        XCTAssertEqual(CoverFlowKEyboard().text, "Hello, World!")
     }
 
     static var allTests = [
