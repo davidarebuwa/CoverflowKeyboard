@@ -1,39 +1,29 @@
-<h1 align="center">
-  <br>
-    <img src="docs/logo.png"/>
-  <br>
-  CoverflowKeyboard
-</h1>
+# CoverflowKeyboard
 
-<p align="center">
-  <img src="https://badgen.net/github/tag/davidarebuwa/CoverflowKeyboard" />
-  <img src="https://badgen.net/badge/Integrations/Cocoapods,SPM?list=|" />
-  <img src="https://badgen.net/badge/Platforms/iOS,iPadOS?list=|" />
-  <img src="https://badgen.net/github/license/davidarebuwa/CoverflowKeyboard" />
-  <br>
-</p>
+[![CI Status](https://img.shields.io/travis/undeaD_D@live.de/CoverflowKeyboard.svg?style=flat)](https://travis-ci.org/undeaD_D@live.de/CoverflowKeyboard)
+[![Version](https://img.shields.io/cocoapods/v/CoverflowKeyboard.svg?style=flat)](https://cocoapods.org/pods/CoverflowKeyboard)
+[![License](https://img.shields.io/cocoapods/l/CoverflowKeyboard.svg?style=flat)](https://cocoapods.org/pods/CoverflowKeyboard)
+[![Platform](https://img.shields.io/cocoapods/p/CoverflowKeyboard.svg?style=flat)](https://cocoapods.org/pods/CoverflowKeyboard)
 
-<p align="center">
-  This repository contains the <strong>CoverflowKeyboard</strong> source code.
-  CoverflowKeyboard enables you to create creative and fancy Keyboard coverflows, with multiple styling and sizing options.
-</p>
+## Example
 
-## Table of contents
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-  * [WIP ...](#wip)
-  * [Contributing](#contributing)
-  * [License](#license)
-  * [Special thanks](#special-thanks)
+## Requirements
 
-## Contributing
+## Installation
 
-You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
-or translating any document here to your language. To find out more check out the [CONTRIBUTING.md](CONTRIBUTING.md).
+CoverflowKeyboard is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'CoverflowKeyboard'
+```
+
+## Author
+
+undeaD_D@live.de, dominic.drees@atino.de
 
 ## License
 
-[MIT](LICENSE) - David Bosun-Arebuwa - 2020
-
-## Special thanks
-
-* [undeaD_D](https://github.com/undeaDD)
+CoverflowKeyboard is available under the MIT license. See the LICENSE file for more info.

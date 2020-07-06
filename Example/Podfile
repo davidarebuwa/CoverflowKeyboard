@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CoverflowKeyboard_Example' do
+  pod 'CoverflowKeyboard', :path => '../'
+
+  target 'CoverflowKeyboard_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
