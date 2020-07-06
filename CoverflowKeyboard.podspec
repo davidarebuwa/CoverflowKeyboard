@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author           = { 'undeaD_D@live.de' => 'dominic.drees@atino.de' }
   s.source           = { :git => 'https://github.com/davidarebuwa/CoverflowKeyboard.git', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
-  s.source_files = 'CoverflowKeyboard/Classes/**/*'
+  s.source_files = 'Sources/CoverflowKeyboard/Classes/**/*'
   s.swift_version = ['5.0', '5.1', '5.2']
   s.frameworks = 'UIKit'
 end
