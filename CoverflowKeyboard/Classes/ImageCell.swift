@@ -22,7 +22,11 @@ class ImageCell: UICollectionViewCell {
         subtitle = UILabel()
         subtitle.font = UIFont.boldSystemFont(ofSize: 10)
         subtitle.textAlignment = .center
-        subtitle.textColor = .secondaryLabel
+        if #available(iOS 13.0, *) {
+            subtitle.textColor = .secondaryLabel
+        } else {
+            subtitle.textColor = .lightGray
+        }
         subtitle.translatesAutoresizingMaskIntoConstraints = false
         
         
@@ -43,7 +47,7 @@ class ImageCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        return nil
     }
     
 }

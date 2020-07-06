@@ -20,7 +20,11 @@ class CoverFlowEmojiCell: UICollectionViewCell {
         subtitle = UILabel(frame: CGRect(x: 0, y: 0, width: frame.width, height: 24))
         subtitle.font = UIFont.systemFont(ofSize: 10)
         subtitle.textAlignment = .center
-        subtitle.textColor = .secondaryLabel
+        if #available(iOS 13.0, *) {
+            subtitle.textColor = .secondaryLabel
+        } else {
+            subtitle.textColor = .lightGray
+        }
         container = UIStackView(arrangedSubviews: [emoji, subtitle])
         container.axis = .vertical
         container.alignment = .center
@@ -31,7 +35,12 @@ class CoverFlowEmojiCell: UICollectionViewCell {
         super.init(frame: frame)
         
 
-        contentView.backgroundColor = .tertiarySystemBackground
+        if #available(iOS 13.0, *) {
+            contentView.backgroundColor = .tertiarySystemBackground
+        } else {
+            contentView.backgroundColor = .white
+        }
+
         contentView.layer.cornerRadius = contentView.layer.frame.width / 2
         
         contentView.addSubview(container)
@@ -41,7 +50,7 @@ class CoverFlowEmojiCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        return nil
     }
     
 }
