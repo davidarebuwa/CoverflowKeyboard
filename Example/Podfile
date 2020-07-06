@@ -1,11 +1,7 @@
+platform :ios, '11.0'
 use_frameworks!
+inhibit_all_warnings!
 
 target 'CoverflowKeyboard_Example' do
   pod 'CoverflowKeyboard', :path => '../'
-
-  target 'CoverflowKeyboard_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
