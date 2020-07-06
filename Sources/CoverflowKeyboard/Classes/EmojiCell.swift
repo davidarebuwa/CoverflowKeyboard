@@ -1,5 +1,5 @@
 //
-//  EmojiCell.swift
+//  ImageCell.swift
 //  CoverflowKeyboard
 //
 //  Created by Dominic Drees on 06.07.20.
@@ -7,50 +7,54 @@
 
 import UIKit
 
-class CoverFlowEmojiCell: UICollectionViewCell {
-    var emoji: UILabel
-    var subtitle: UILabel
-    var container: UIStackView
-    
-    override init(frame: CGRect) {
-        emoji = UILabel(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height * 2))
+class EmojiCell: UICollectionViewCell, CoverflowCellProtocol {
+    var emoji: UILabel = {
+        let emoji = UILabel()
+        emoji.font = UIFont.boldSystemFont(ofSize: 10)
         emoji.textAlignment = .center
-        emoji.font = UIFont.boldSystemFont(ofSize: 30)
-        
-        subtitle = UILabel(frame: CGRect(x: 0, y: 0, width: frame.width, height: 24))
-        subtitle.font = UIFont.systemFont(ofSize: 10)
+        emoji.translatesAutoresizingMaskIntoConstraints = false
+        return emoji
+    }()
+    
+    var subtitle: UILabel = {
+        let subtitle = UILabel()
+        subtitle.font = UIFont.boldSystemFont(ofSize: 10)
         subtitle.textAlignment = .center
         if #available(iOS 13.0, *) {
             subtitle.textColor = .secondaryLabel
         } else {
             subtitle.textColor = .lightGray
         }
-        container = UIStackView(arrangedSubviews: [emoji, subtitle])
-        container.axis = .vertical
-        container.alignment = .center
-        container.spacing = 10
-        container.distribution = .equalSpacing
-        container.translatesAutoresizingMaskIntoConstraints = false
-        
+        subtitle.translatesAutoresizingMaskIntoConstraints = false
+        return subtitle
+    }()
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
+        contentView.addSubview(emoji)
+        contentView.addSubview(subtitle)
         
-
-        if #available(iOS 13.0, *) {
-            contentView.backgroundColor = .tertiarySystemBackground
-        } else {
-            contentView.backgroundColor = .white
-        }
-
-        contentView.layer.cornerRadius = contentView.layer.frame.width / 2
-        
-        contentView.addSubview(container)
-        container.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
-        container.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
-        
+        NSLayoutConstraint.activate([
+            emoji.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
+            emoji.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            emoji.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
+            emoji.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+            
+            subtitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
+            subtitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            subtitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
+            subtitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
+        ])
     }
     
     required init?(coder: NSCoder) {
+        print("EmojiCell init(coder:) not implemented")
         return nil
     }
     
+    func setUp(with data: CellData) {
+        emoji.text = data.title
+        subtitle.text = data.subtitle
+    }
+
 }

@@ -69,10 +69,7 @@ class CoverflowLayout: UICollectionViewFlowLayout {
                 return CGPoint(x: proposedContentOffset.x + offsetAdjustment, y: proposedContentOffset.y)
             }
 
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        // Invalidate layout so that every cell get a chance to be zoomed when it reaches the center of the screen
-        return true
-    }
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool { true }
 
     override func invalidationContext(forBoundsChange newBounds: CGRect) -> UICollectionViewLayoutInvalidationContext {
         if let context = super.invalidationContext(forBoundsChange: newBounds) as? UICollectionViewFlowLayoutInvalidationContext {
