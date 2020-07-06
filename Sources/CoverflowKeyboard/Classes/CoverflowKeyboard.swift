@@ -7,6 +7,6 @@
 
 import UIKit
 
-class CoverflowKeyboard {
+final class CoverflowKeyboard {
     
 }

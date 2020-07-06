@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CoverFlowView: UIView, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+final class CoverFlowInputView: UIView, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     var feedbackGenerator: UISelectionFeedbackGenerator? = UISelectionFeedbackGenerator()
     var collectionView: UICollectionView
     var data: [CellData] = []
@@ -16,18 +16,16 @@ class CoverFlowView: UIView, UICollectionViewDelegate, UICollectionViewDelegateF
         collectionView = UICollectionView(frame: frame)
         super.init(frame: frame)
 
+        collectionView.register(ImageCell.self, forCellWithReuseIdentifier: CellType.imageCell.rawValue)
+        collectionView.register(EmojiCell.self, forCellWithReuseIdentifier: CellType.emojiCell.rawValue)
+        collectionView.register(CustomCell.self, forCellWithReuseIdentifier: CellType.customCell.rawValue)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.collectionViewLayout = CoverflowLayout()
         collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
-        if #available(iOS 13.0, *) {
-            collectionView.backgroundColor = .secondarySystemBackground
-        } else {
-            collectionView.backgroundColor = .white
-        }
-        
+
         addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 0),

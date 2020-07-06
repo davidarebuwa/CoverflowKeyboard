@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
-                            <tableViewSection headerTitle="Invokation Methods" id="TrY-kS-fgS">
+                            <tableViewSection headerTitle="  Invokation Methods" id="TrY-kS-fgS">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6Rj-fa-9RK" style="IBUITableViewCellStyleDefault" id="ukf-QR-5Pz">
                                         <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
@@ -78,7 +78,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="CellTypes" id="Vc7-UH-Cm4">
+                            <tableViewSection headerTitle="  CellTypes" id="Vc7-UH-Cm4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="zp4-Un-gja" style="IBUITableViewCellStyleDefault" id="PFc-Ru-tVB">
                                         <rect key="frame" x="20" y="242" width="374" height="43.5"/>

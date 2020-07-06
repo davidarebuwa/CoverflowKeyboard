@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../Sources/CoverflowKeyboard/Classes/CustomCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:CoverflowKeyboard.xcodeproj">
    </FileRef>
    <FileRef

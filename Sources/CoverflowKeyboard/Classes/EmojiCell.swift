@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EmojiCell: UICollectionViewCell, CoverflowCellProtocol {
+final class EmojiCell: UICollectionViewCell, CoverflowCellProtocol {
     var emoji: UILabel = {
         let emoji = UILabel()
         emoji.font = UIFont.boldSystemFont(ofSize: 10)
@@ -20,11 +20,6 @@ class EmojiCell: UICollectionViewCell, CoverflowCellProtocol {
         let subtitle = UILabel()
         subtitle.font = UIFont.boldSystemFont(ofSize: 10)
         subtitle.textAlignment = .center
-        if #available(iOS 13.0, *) {
-            subtitle.textColor = .secondaryLabel
-        } else {
-            subtitle.textColor = .lightGray
-        }
         subtitle.translatesAutoresizingMaskIntoConstraints = false
         return subtitle
     }()

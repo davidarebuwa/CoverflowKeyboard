@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageCell: UICollectionViewCell, CoverflowCellProtocol {
+final class ImageCell: UICollectionViewCell, CoverflowCellProtocol {
     var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -19,11 +19,6 @@ class ImageCell: UICollectionViewCell, CoverflowCellProtocol {
         let subtitle = UILabel()
         subtitle.font = UIFont.boldSystemFont(ofSize: 10)
         subtitle.textAlignment = .center
-        if #available(iOS 13.0, *) {
-            subtitle.textColor = .secondaryLabel
-        } else {
-            subtitle.textColor = .lightGray
-        }
         subtitle.translatesAutoresizingMaskIntoConstraints = false
         return subtitle
     }()
