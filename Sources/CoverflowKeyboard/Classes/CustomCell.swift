@@ -19,7 +19,8 @@ final class CustomCell: UICollectionViewCell, CoverflowCellProtocol {
     }
     
     func setUp(with data: CellData) {
-        
+        // maybe add a aubview thats supplied via CellData
+        // to make it super configurable
     }
     
 }

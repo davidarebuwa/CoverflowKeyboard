@@ -14,6 +14,8 @@ class CoverflowLayout: UICollectionViewFlowLayout {
     override init() {
         super.init()
 
+        // fix some bugs at the edges :S ... and make the constants ( above ) configurable from outside ( via wrapper )
+        
         scrollDirection = .horizontal
         minimumLineSpacing = 65
         itemSize = CGSize(width: 150, height: 150)
