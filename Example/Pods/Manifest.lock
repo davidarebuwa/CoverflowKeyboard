@@ -1,0 +1,16 @@
+PODS:
+  - CoverflowKeyboard (0.1.0)
+
+DEPENDENCIES:
+  - CoverflowKeyboard (from `../`)
+
+EXTERNAL SOURCES:
+  CoverflowKeyboard:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CoverflowKeyboard: 2ffd1d044968e32720f114f961bb4319d1b7b7a0
+
+PODFILE CHECKSUM: 42dffb1c759fecb0d79a428e1d8c659672c3bb0c
+
+COCOAPODS: 1.9.3

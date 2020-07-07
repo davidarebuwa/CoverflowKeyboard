@@ -1,0 +1,6 @@
+framework module CoverflowKeyboard {
+  umbrella header "CoverflowKeyboard-umbrella.h"
+
+  export *
+  module * { export * }
+}

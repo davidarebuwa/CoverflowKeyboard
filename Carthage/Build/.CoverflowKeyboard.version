@@ -1,0 +1,24 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "19434a00d5d3cd69fec41b6d56902755d2d8f3bb",
+  "iOS" : [
+    {
+      "name" : "Pods_CoverflowKeyboard_Example",
+      "hash" : "c57423e6fddd9e21168c5d7a04b2a946c1cf981512895b2669c59fa405240b46",
+      "linking" : "static"
+    },
+    {
+      "name" : "Pods_CoverflowKeyboard_Tests",
+      "hash" : "7abff58691b0bc418c2c42f61d897f4553194e2188fd42fa9abf4c3de02465f3",
+      "linking" : "static"
+    }
+  ]
+}

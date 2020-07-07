@@ -1,0 +1,22 @@
+{
+  "name": "CoverflowKeyboard",
+  "version": "0.1.0",
+  "summary": "A short description of CoverflowKeyboard.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/undeaD_D@live.de/CoverflowKeyboard",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "undeaD_D@live.de": "dominic.drees@atino.de"
+  },
+  "source": {
+    "git": "https://github.com/undeaD_D@live.de/CoverflowKeyboard.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CoverflowKeyboard/Classes/**/*"
+}
