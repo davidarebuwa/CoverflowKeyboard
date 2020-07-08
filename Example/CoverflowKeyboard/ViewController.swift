@@ -13,31 +13,61 @@ class ViewController: UITableViewController, CoverflowDelegate {
     
     @IBOutlet weak var fromButton: UIButton!
     @IBOutlet weak var fromTextfield: UITextField!
-    let keyboard = CoverflowKeyboard()
+    private var keyboard: CoverflowKeyboard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        keyboard.delegate = self
-
-        fromButton.add(keyboard: keyboard)
-        fromTextfield.add(keyboard: keyboard)
+        keyboard = CoverflowKeyboard(delegate: self, data: [
+            CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+            CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+            CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+            CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+            CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle")
+        ])
+        
+        fromButton.add(keyboard: keyboard!)
+        fromTextfield.add(keyboard: keyboard!)
     }
     
-    func didSelect(cellAt indexPath: IndexPath) {
-        print("cell selected: \(indexPath)")
+    func didSelect(with keyboard: CoverflowKeyboard, cellAt indexPath: IndexPath) {
+        print("[Delegate] Cell selected: \(indexPath) -> \(keyboard.data[indexPath.row].cellType.rawValue)")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch(indexPath.section, indexPath.row) {
         case (0, 2):
             let cell = tableView.cellForRow(at: indexPath)
-            cell?.present(keyboard: keyboard)
+            cell?.contentView.present(keyboard: keyboard!)
         case (1, 0):
-            print("view cell")
+            let cell = tableView.cellForRow(at: indexPath)
+            let temp = CoverflowKeyboard(delegate: self, data: [
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle")
+            ])
+            cell?.contentView.present(keyboard: temp)
         case (1, 1):
-            print("view cell")
+            let cell = tableView.cellForRow(at: indexPath)
+            let temp = CoverflowKeyboard(delegate: self, data: [
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle")
+            ])
+            cell?.contentView.present(keyboard: temp)
         case (1, 2):
-            print("view cell")
+            let cell = tableView.cellForRow(at: indexPath)
+            let temp = CoverflowKeyboard(delegate: self, data: [
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle"),
+                CellData(cellType: .emojiCell, title: "title", image: nil, subtitle: "subtitle")
+            ])
+            cell?.contentView.present(keyboard: temp)
         default:
             return
         }

@@ -35,6 +35,7 @@ internal final class CoverFlowInputView: UIView {
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
         ])
 
+        snapshotView(afterScreenUpdates: true)
         feedbackGenerator?.prepare()
     }
 
@@ -70,7 +71,7 @@ extension CoverFlowInputView: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        parent.delegate?.didSelect(cellAt: indexPath)
+        parent.delegate?.didSelect(with: parent, cellAt: indexPath)
     }
 
 }

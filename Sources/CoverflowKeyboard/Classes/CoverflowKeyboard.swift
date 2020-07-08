@@ -11,8 +11,10 @@ public final class CoverflowKeyboard {
     public var delegate: CoverflowDelegate?
     public var data: [CellData] = []
   
-    public init() {
-
+    public init() { }
+    public init(delegate: CoverflowDelegate?, data: [CellData]?) {
+        self.delegate = delegate
+        self.data = data ?? []
     }
 
 }

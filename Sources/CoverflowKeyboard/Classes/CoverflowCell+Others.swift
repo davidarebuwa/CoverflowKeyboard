@@ -8,10 +8,17 @@
 import UIKit
 
 public struct CellData {
-    let cellType: CellType
-    let title: String?
-    let image: UIImage?
-    let subtitle: String?
+    public let cellType: CellType
+    public let title: String?
+    public let image: UIImage?
+    public let subtitle: String?
+    
+    public init(cellType: CellType, title: String?, image: UIImage?, subtitle: String?) {
+        self.cellType = cellType
+        self.title = title
+        self.image = image
+        self.subtitle = subtitle
+    }
 }
 
 internal protocol CoverflowCellProtocol {
@@ -25,14 +32,13 @@ public enum CellType: String {
 }
 
 public protocol CoverflowDelegate {
-    func didSelect(cellAt indexPath: IndexPath)
+    func didSelect(with keyboard: CoverflowKeyboard, cellAt indexPath: IndexPath)
 }
 
 extension UIButton {
     public func add(keyboard: CoverflowKeyboard) {
         let hidden = UITextField(frame: .zero)
         hidden.inputView = inputView
-        hidden.snapshotView(afterScreenUpdates: true)
         addSubview(hidden)
         addTarget(self, action: #selector(presentKeyboard), for: .touchUpInside)
     }
@@ -46,15 +52,13 @@ extension UIButton {
 extension UITextField {
     public func add(keyboard: CoverflowKeyboard) {
         inputView = keyboard.inputView
-        inputView?.snapshotView(afterScreenUpdates: true)
     }
 }
 
-extension UITableViewCell {
+extension UIView {
     public func present(keyboard: CoverflowKeyboard) {
         let hidden = UITextField(frame: .zero)
         hidden.inputView = keyboard.inputView
-        hidden.snapshotView(afterScreenUpdates: true)
         addSubview(hidden)
         hidden.becomeFirstResponder()
     }
