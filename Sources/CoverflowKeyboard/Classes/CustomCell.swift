@@ -13,10 +13,7 @@ final class CustomCell: UICollectionViewCell, CoverflowCellProtocol {
         super.init(frame: frame)
     }
     
-    required init?(coder: NSCoder) {
-        print("ImageCell init(coder:) not implemented")
-        return nil
-    }
+    required init?(coder: NSCoder) { nil }
     
     func setUp(with data: CellData) {
         // maybe add a aubview thats supplied via CellData

@@ -7,13 +7,14 @@
 
 import UIKit
 
-final class CoverFlowInputView: UIView, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+internal final class CoverFlowInputView: UIView {
     var feedbackGenerator: UISelectionFeedbackGenerator? = UISelectionFeedbackGenerator()
     var collectionView: UICollectionView
-    var data: [CellData] = []
-
-    override init(frame: CGRect) {
-        collectionView = UICollectionView(frame: frame)
+    var parent: CoverflowKeyboard
+    
+    init(_ frame: CGRect, _ parent: CoverflowKeyboard) {
+        self.parent = parent
+        self.collectionView = UICollectionView(frame: frame)
         super.init(frame: frame)
 
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: CellType.imageCell.rawValue)
@@ -37,16 +38,18 @@ final class CoverFlowInputView: UIView, UICollectionViewDelegate, UICollectionVi
         feedbackGenerator?.prepare()
     }
 
-    required init?(coder: NSCoder) {
-        return nil
-    }
+    required init?(coder: NSCoder) { nil }
+
+}
+
+extension CoverFlowInputView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let cell = cell as? CoverflowCellProtocol else {
             fatalError("invalid cell dequeued")
         }
         
-        cell.setUp(with: data[indexPath.row])
+        cell.setUp(with: parent.data[indexPath.row])
         feedbackGenerator?.selectionChanged()
     }
 
@@ -59,16 +62,15 @@ final class CoverFlowInputView: UIView, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return parent.data.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.dequeueReusableCell(withReuseIdentifier: data[indexPath.row].cellType.rawValue, for: indexPath)
+        collectionView.dequeueReusableCell(withReuseIdentifier: parent.data[indexPath.row].cellType.rawValue, for: indexPath)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = data[indexPath.row]
-        print("Selected: \(item)")
+        parent.delegate?.didSelect(cellAt: indexPath)
     }
 
 }

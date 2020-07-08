@@ -93,9 +93,9 @@
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				12B85AD024B3C9440009DF1A /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				1247290A24B39FA0008C1BAE /* Launchscreen.storyboard */,
-				12B85AD024B3C9440009DF1A /* ViewController.swift */,
 			);
 			name = "Example for CoverflowKeyboard";
 			path = CoverflowKeyboard;

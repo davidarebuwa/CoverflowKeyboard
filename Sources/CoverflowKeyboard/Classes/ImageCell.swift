@@ -41,10 +41,7 @@ final class ImageCell: UICollectionViewCell, CoverflowCellProtocol {
         ])
     }
     
-    required init?(coder: NSCoder) {
-        print("ImageCell init(coder:) not implemented")
-        return nil
-    }
+    required init?(coder: NSCoder) { nil }
     
     func setUp(with data: CellData) {
         imageView.image = data.image

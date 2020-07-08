@@ -9,43 +9,38 @@
 import UIKit
 import CoverflowKeyboard
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, CoverflowDelegate {
     
-    @IBOutlet weak var sampleButton: UIButton!
-    @IBOutlet weak var sampleBarButton: UIBarButtonItem!
-    @IBOutlet weak var sampleTextField: UITextField!
-   
+    @IBOutlet weak var fromButton: UIButton!
+    @IBOutlet weak var fromTextfield: UITextField!
+    let keyboard = CoverflowKeyboard()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupSampleButton()
+        keyboard.delegate = self
+
+        fromButton.add(keyboard: keyboard)
+        fromTextfield.add(keyboard: keyboard)
     }
     
-    func setupSampleButton(){
-        let dummyTF = UITextField(frame: .zero)
-        dummyTF.placeholder = "Emoji Coverflow"
-        sampleButton.addSubview(dummyTF)
-       //Coverflow stuff
-        let coverFlow = CoverflowKeyboard()
-       
-        
-        dummyTF.becomeFirstResponder()
+    func didSelect(cellAt indexPath: IndexPath) {
+        print("cell selected: \(indexPath)")
     }
-    
-    func emojiCoverFlow(){}
-    func imageCoverFlow(){}
-    func customCoverFlow(){}
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        super.tableView(tableView, didSelectRowAt: indexPath)
         switch(indexPath.section, indexPath.row) {
-        case (0, 0):
-            print("selected")
-        
+        case (0, 2):
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.present(keyboard: keyboard)
+        case (1, 0):
+            print("view cell")
+        case (1, 1):
+            print("view cell")
+        case (1, 2):
+            print("view cell")
         default:
-            print("selected")
+            return
         }
     }
+
 }

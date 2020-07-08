@@ -42,10 +42,7 @@ final class EmojiCell: UICollectionViewCell, CoverflowCellProtocol {
         ])
     }
     
-    required init?(coder: NSCoder) {
-        print("EmojiCell init(coder:) not implemented")
-        return nil
-    }
+    required init?(coder: NSCoder) { nil }
     
     func setUp(with data: CellData) {
         emoji.text = data.title
