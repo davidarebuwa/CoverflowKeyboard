@@ -14,7 +14,7 @@ internal final class CoverFlowInputView: UIView {
     
     init(_ frame: CGRect, _ parent: CoverflowKeyboard) {
         self.parent = parent
-        self.collectionView = UICollectionView(frame: frame)
+        self.collectionView = UICollectionView(frame: frame,collectionViewLayout: CoverflowLayout())
         super.init(frame: frame)
 
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: CellType.imageCell.rawValue)
@@ -23,7 +23,7 @@ internal final class CoverFlowInputView: UIView {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.collectionViewLayout = CoverflowLayout()
+       //collectionView.collectionViewLayout = CoverflowLayout()
         collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.translatesAutoresizingMaskIntoConstraints = false
 
