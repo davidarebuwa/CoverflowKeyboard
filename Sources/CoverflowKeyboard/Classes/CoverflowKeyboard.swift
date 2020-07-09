@@ -15,7 +15,7 @@ public final class CoverflowKeyboard {
     public init(delegate: CoverflowDelegate?, data: [CellData]?) {
         self.delegate = delegate
         self.data = data ?? []
-        inputView = CoverFlowInputView(CGRect(x: 0, y: 0, width: 1, height: 1), self)
+        inputView = CoverFlowInputView(.zero, self)
     }
 
 }

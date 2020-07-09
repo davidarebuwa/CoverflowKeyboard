@@ -33,9 +33,9 @@ final class EmojiCell: UICollectionViewCell, CoverflowCellProtocol {
             emoji.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
             emoji.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
             emoji.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
-            emoji.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+            emoji.bottomAnchor.constraint(equalTo: subtitle.topAnchor, constant: 10),
             
-            subtitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
+            subtitle.topAnchor.constraint(equalTo: emoji.bottomAnchor, constant: 10),
             subtitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
             subtitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
             subtitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)

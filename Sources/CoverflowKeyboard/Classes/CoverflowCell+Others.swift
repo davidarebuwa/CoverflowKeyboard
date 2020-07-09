@@ -39,6 +39,7 @@ extension UIButton {
     public func add(keyboard: CoverflowKeyboard) {
         let hidden = UITextField(frame: .zero)
         hidden.inputView = inputView
+        inputView?.applyAutoLayout()
         addSubview(hidden)
         addTarget(self, action: #selector(presentKeyboard), for: .touchUpInside)
     }
@@ -52,6 +53,7 @@ extension UIButton {
 extension UITextField {
     public func add(keyboard: CoverflowKeyboard) {
         inputView = keyboard.inputView
+        inputView?.applyAutoLayout()
     }
 }
 
@@ -59,7 +61,17 @@ extension UIView {
     public func present(keyboard: CoverflowKeyboard) {
         let hidden = UITextField(frame: .zero)
         hidden.inputView = keyboard.inputView
+        inputView?.applyAutoLayout()
         addSubview(hidden)
         hidden.becomeFirstResponder()
+    }
+    
+    func applyAutoLayout(){
+        if let parent = inputView?.superview{
+            inputView?.leadingAnchor.constraint(equalTo: parent.leadingAnchor).isActive = true
+            inputView?.trailingAnchor.constraint(equalTo: parent.leadingAnchor).isActive = true
+            inputView?.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
+            inputView?.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
+        }
     }
 }
