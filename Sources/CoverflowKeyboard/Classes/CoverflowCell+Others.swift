@@ -21,6 +21,7 @@ public struct CellData {
     }
 }
 
+@available(iOS 11.0, *)
 internal protocol CoverflowCellProtocol {
     func setUp(with data: CellData)
 }
@@ -31,10 +32,12 @@ public enum CellType: String {
     case customCell = "customCell"
 }
 
+@available(iOS 11.0, *)
 public protocol CoverflowDelegate {
     func didSelect(with keyboard: CoverflowKeyboard, cellAt indexPath: IndexPath)
 }
 
+@available(iOS 11.0, *)
 extension UIButton {
     public func add(keyboard: CoverflowKeyboard) {
         let hidden = UITextField(frame: .zero)
@@ -50,6 +53,7 @@ extension UIButton {
     }
 }
 
+@available(iOS 11.0, *)
 extension UITextField {
     public func add(keyboard: CoverflowKeyboard) {
         inputView = keyboard.inputView
@@ -57,6 +61,7 @@ extension UITextField {
     }
 }
 
+@available(iOS 11.0, *)
 extension UIView {
     public func present(keyboard: CoverflowKeyboard) {
         let hidden = UITextField(frame: .zero)
