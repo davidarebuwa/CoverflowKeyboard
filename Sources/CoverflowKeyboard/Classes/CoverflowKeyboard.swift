@@ -6,6 +6,7 @@
 
 import UIKit
 
+@available(iOS 11.0, *)
 public final class CoverflowKeyboard {
     internal var inputView : CoverFlowInputView?
     public var delegate: CoverflowDelegate?
