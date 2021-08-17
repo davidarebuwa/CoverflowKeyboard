@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 11.0, *)
 class CoverflowLayout: UICollectionViewFlowLayout {
     let activeDistance: CGFloat = 200
     let zoomFactor: CGFloat = 0.7
