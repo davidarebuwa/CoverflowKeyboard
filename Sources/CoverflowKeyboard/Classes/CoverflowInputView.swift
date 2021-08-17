@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 internal final class CoverFlowInputView: UIView {
     var feedbackGenerator: UISelectionFeedbackGenerator? = UISelectionFeedbackGenerator()
     var collectionView: UICollectionView
