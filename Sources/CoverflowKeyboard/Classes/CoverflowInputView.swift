@@ -7,7 +7,7 @@
 
 import UIKit
 
-@available(iOS 10.0, *)
+@available(iOS 11.0, *)
 internal final class CoverFlowInputView: UIView {
     var feedbackGenerator: UISelectionFeedbackGenerator? = UISelectionFeedbackGenerator()
     var collectionView: UICollectionView
@@ -44,6 +44,7 @@ internal final class CoverFlowInputView: UIView {
 
 }
 
+@available(iOS 11.0, *)
 extension CoverFlowInputView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
