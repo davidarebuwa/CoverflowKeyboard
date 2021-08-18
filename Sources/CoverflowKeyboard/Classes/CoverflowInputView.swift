@@ -7,7 +7,7 @@
 
 import UIKit
 
-@available(iOS 10.0, *)
+@available(iOS 11.0, *)
 internal final class CoverFlowInputView: UIView {
     var feedbackGenerator: UISelectionFeedbackGenerator? = UISelectionFeedbackGenerator()
     var collectionView: UICollectionView
@@ -24,10 +24,14 @@ internal final class CoverFlowInputView: UIView {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-       //collectionView.collectionViewLayout = CoverflowLayout()
         collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        if #available(iOS 13.0, *) {
+            backgroundColor = .secondarySystemGroupedBackground
+            collectionView.backgroundColor = .secondarySystemGroupedBackground
+        }
+        
         addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
@@ -44,6 +48,7 @@ internal final class CoverFlowInputView: UIView {
 
 }
 
+@available(iOS 11.0, *)
 extension CoverFlowInputView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
