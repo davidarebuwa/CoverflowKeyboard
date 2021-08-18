@@ -66,17 +66,20 @@ extension UIView {
     public func present(keyboard: CoverflowKeyboard) {
         let hidden = UITextField(frame: .zero)
         hidden.inputView = keyboard.inputView
-        inputView?.applyAutoLayout()
+        keyboard.inputView?.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 300)
         addSubview(hidden)
         hidden.becomeFirstResponder()
     }
     
-    func applyAutoLayout(){
-        if let parent = inputView?.superview{
-            inputView?.leadingAnchor.constraint(equalTo: parent.leadingAnchor).isActive = true
-            inputView?.trailingAnchor.constraint(equalTo: parent.leadingAnchor).isActive = true
-            inputView?.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
-            inputView?.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
+    func applyAutoLayout() {
+        if let inputView = inputView, let parent = inputView.superview {
+            NSLayoutConstraint.activate([
+                inputView.leadingAnchor.constraint(equalTo: parent.leadingAnchor),
+                inputView.trailingAnchor.constraint(equalTo: parent.leadingAnchor),
+                inputView.topAnchor.constraint(equalTo: parent.topAnchor),
+                inputView.heightAnchor.constraint(equalToConstant: 300),
+                inputView.bottomAnchor.constraint(equalTo: parent.bottomAnchor)
+            ])
         }
     }
 }

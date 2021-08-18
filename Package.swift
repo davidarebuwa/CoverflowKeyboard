@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "CoverflowKeyboard",
+    platforms: [.iOS(.v11)],
     products: [
         .library(
             name: "CoverflowKeyboard",
@@ -16,9 +17,8 @@ let package = Package(
     targets: [
         .target(
             name: "CoverflowKeyboard",
-            dependencies: []),
-        .testTarget(
-            name: "CoverflowKeyboardTests",
-            dependencies: ["CoverflowKeyboard"]),
+            dependencies: [],
+            path: "Sources"
+        )
     ]
 )
